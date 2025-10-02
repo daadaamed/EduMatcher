@@ -1,75 +1,22 @@
-# Nuxt Minimal Starter
+# Edumapper – Nuxt + TypeScript + Tailwind v4
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A UI prototype implementation for a Edumapper
 
-## Setup
+## Stack
+- Nuxt 4, TypeScript
+- Tailwind CSS v4 (`@tailwindcss/vite`)
 
-Make sure to install dependencies:
+## Features
 
+This prototype helps a student quickly select their lycée, classe, and spécialités using simple, reusable cards with explicit confirmation to prevent mistakes.  
+
+With one “Confirmer” action, inputs are summarized and the student is routed to a results page that clearly communicates admission likelihood (percentage ring + reliability stars).  
+
+The layout is mobile-first and fast, ensuring a smooth experience on phone, tablet, and desktop.  
+Components are reusable and data-driven, making it easy to add programs or criteria without changing the overall UX.
+
+## Quick start
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+npm i
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
