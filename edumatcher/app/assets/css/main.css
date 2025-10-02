@@ -13,6 +13,8 @@
 
   --color-card: #F5F5F5;            /* Card-bg-gray */
   --color-divider: #E0E0E0;         /* gray-border */
+  --gradient-brand: radial-gradient(60% 50% at 100% 0%, #FFBBE1 0%, transparent 60%),
+                   linear-gradient(135deg, #FF7342 0%, #B176FF 100%);
 }
 
 /* reusable card class */
@@ -22,10 +24,12 @@
   padding: 20px;
   gap: 24px;
   backdrop-filter: blur(16px);
-  background-image:
-    radial-gradient(60% 50% at 100% 0%, #FFBBE1 0%, transparent 60%),
-    linear-gradient(135deg, #FF7342 0% ,#B176FF 100%);
+  background-image: var(--gradient-brand);
   color: white;
+}
+
+@utility bg-brand-gradient {
+  background-image: var(--gradient-brand);
 }
 
 
