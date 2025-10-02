@@ -64,7 +64,7 @@ const onConfirm = () => {
       <span v-if="committedCount === 0" class="mr-2 text-sm text-muted">uncomplete</span>
       <button
         type="button"
-        class="ml-auto inline-flex size-8 items-center justify-center rounded-md hover:bg-gray-100"
+        class="ml-auto inline-flex size-8 items-center justify-center rounded-xl hover:bg-gray-100"
         :aria-expanded="open"
         @click="toggle"
       >
@@ -91,8 +91,8 @@ const onConfirm = () => {
             :class="[
               'rounded-full border px-4 py-2 text-sm',
               (draft[sec.subtitle] ?? []).includes(opt)
-                ? 'bg-primary text-white border-primary'
-                : 'bg-white text-primary border-divider hover:bg-gray-50'
+                ? 'bg-white text-primary border-primary'
+                : 'bg-card text-primary border-divider hover:bg-gray-50'
             ]"
           >
             {{ opt }}

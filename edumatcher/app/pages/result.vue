@@ -45,19 +45,19 @@ const offset = circumference * (1 - percent / 100);
             </svg>
           <img src="/flash.png" alt="" class="absolute inset-0 m-auto h-10 w-10" />
         </div>
-        <h3 class="text-3xl font-bold text-primary">91% - Très élevées</h3>
+        <h3 class="text-3xl font-bold text-primary">91% · Très élevées</h3>
         <p class="text-sm text-secondary">Fiabilité</p>
         <div class="text-xl leading-none">
-          <span class="text-primary">★★★★</span><span class="text-white">★</span>
+          <span class="text-primary">★★★★</span><span class="text-divider">★</span>
         </div>
-        <p class="mt-2 max-w-[560px] text-sm text-beige-300">
+        <p class="mt-2 max-w-[560px] text-sm text-secondary">
           Cette estimation est fournie à titre indicatif et ne garantit en aucun cas la décision d’admission de l’établissement.
         </p>
       </section>
 
       <!-- Bottom button -->
       <button
-        class="w-full rounded-xl bg-primary px-4 py-3 text-sm text-white hover:opacity-90"
+        class="w-full rounded-3xl bg-primary px-4 py-3 text-sm text-white hover:opacity-90"
         @click="back"
       >
         Tester une autre formation
