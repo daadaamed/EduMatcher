@@ -1,5 +1,7 @@
 <template>
-  <div class="font-sans school-card">
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
-</div>
+  <div class="min-h-screen bg-beige-100 text-primary font-sans antialiased">
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>

@@ -3,7 +3,9 @@
 /* tokens */
 @theme {
   --font-sans: "MD Sans", system-ui, sans-serif;
-  --color-bg: #EEE8E4;
+  --color-beige-100: #F7F3F0;  /* light beige 100 */
+  --color-beige-300: #EEE8E4;   /* light beige 300*/
+  --color-white: #FFFFFF;         /* white */
 
   --color-primary: #212121;         /* black */
   --color-secondary: #757575;       /* gray */
