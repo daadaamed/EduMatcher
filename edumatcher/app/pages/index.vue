@@ -1,8 +1,9 @@
 <script setup lang="ts">
 type School = { name: string; city: string; type: "Public" | "Privé" };
 const { data, pending, refresh } = await useFetch<School>("/api/school");
-const classe = ref<string[]>([]);
-const specialites = ref<string[]>([]);
+const classe = ref<Record<string, string[]>>({});
+const specialites = ref<Record<string, string[]>>({});
+const notes = ref<Record<string, string[]>>({});
 </script>
 <template>
   <main class="px-4 py-10">
@@ -35,15 +36,28 @@ const specialites = ref<string[]>([]);
     <div class="mx-auto mt-6 max-w-[720px]">
           <ChoiceCard
             title="Classe"
-            :options="['Seconde','Première','Terminale']"
+            :sections="[
+                { subtitle: '', options: ['Seconde','Première','Terminale'] },
+                { subtitle: 'Générales', options: ['Mathématiques','Physique-Chimie','SVT','SES','HGGSP','NSI'] },
+            ]"
+            
             v-model="classe"
           />
     </div>
     <div class="mx-auto mt-6 max-w-[720px]">
         <ChoiceCard
-            title="Spécialités"
-            :options="[]"
-            v-model="specialites"
+        title="Spécialités"
+        :sections="[
+        ]"
+        v-model="specialites"
+        />
+    </div>
+    <div class="mx-auto mt-6 max-w-[720px]">
+        <ChoiceCard
+        title="notes"
+        :sections="[
+        ]"
+        v-model="notes"
         />
     </div>
   </main>
