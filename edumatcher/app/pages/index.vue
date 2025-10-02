@@ -4,6 +4,13 @@ const { data, pending, refresh } = await useFetch<School>("/api/school");
 const classe = ref<Record<string, string[]>>({});
 const specialites = ref<Record<string, string[]>>({});
 const notes = ref<Record<string, string[]>>({});
+const countSelections = (o: Record<string, string[]>) =>
+  Object.values(o ?? {}).reduce((n, arr) => n + (arr?.length ?? 0), 0);
+const canConfirm = computed(
+    // TODO: check which choices to detect later so that it confirms
+  () => countSelections(classe.value) > 0 || countSelections(specialites.value) > 0
+);
+const goResult = () => navigateTo("/result");
 </script>
 <template>
   <main class="px-4 py-10">
@@ -61,4 +68,18 @@ const notes = ref<Record<string, string[]>>({});
         />
     </div>
   </main>
+  <div class="mx-auto my-8 max-w-[720px]">
+    <button
+      :disabled="!canConfirm"
+      @click="goResult"
+      :class="[
+        'w-full rounded-xl px-4 py-3 text-sm transition',
+        canConfirm
+          ? 'bg-primary text-white border border-primary hover:opacity-90'
+          : 'bg-white text-muted border border-muted cursor-not-allowed'
+      ]"
+    >
+      Confirmer
+    </button>
+  </div>
 </template>
